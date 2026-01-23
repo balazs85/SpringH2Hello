@@ -1,19 +1,19 @@
-package hu.nbt.SpringH2Hello.service;
+package hu.nbt.SpringH2Hello.customMapper.service;
 
-import hu.nbt.SpringH2Hello.dto.UserDto;
-import hu.nbt.SpringH2Hello.mapper.UserMapper;
-import hu.nbt.SpringH2Hello.repository.UserRepository;
+import hu.nbt.SpringH2Hello.customMapper.dto.UserDto;
+import hu.nbt.SpringH2Hello.customMapper.mapper.UserMapper;
+import hu.nbt.SpringH2Hello.customMapper.repository.CustomUserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class UserService {
-    private final UserRepository userRepository;
+public class CustomUserService {
+    private final CustomUserRepository userRepository;
     private final UserMapper userMapper;
 
-    public UserService(
-            UserRepository userRepository,
+    public CustomUserService(
+            CustomUserRepository userRepository,
             UserMapper userMapper) {
         this.userRepository = userRepository;
         this.userMapper = userMapper;

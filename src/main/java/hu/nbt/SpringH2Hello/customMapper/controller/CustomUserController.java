@@ -1,10 +1,7 @@
-package hu.nbt.SpringH2Hello.controller;
+package hu.nbt.SpringH2Hello.customMapper.controller;
 
-import hu.nbt.SpringH2Hello.dto.UserDto;
-import hu.nbt.SpringH2Hello.entity.User;
-import hu.nbt.SpringH2Hello.repository.UserRepository;
-import hu.nbt.SpringH2Hello.service.UserService;
-import org.springframework.http.ResponseEntity;
+import hu.nbt.SpringH2Hello.customMapper.dto.UserDto;
+import hu.nbt.SpringH2Hello.customMapper.service.CustomUserService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,11 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/users")
-public class UserController {
-    private final UserService userService;
+@RequestMapping("/api/custom/users")
+public class CustomUserController {
+    private final CustomUserService userService;
 
-    public UserController(UserService userService) {
+    public CustomUserController(CustomUserService userService) {
         this.userService = userService;
     }
 
