@@ -1,13 +1,14 @@
-package hu.nbt.SpringH2Hello.service;
-
-import hu.nbt.SpringH2Hello.dto.UserDto;
-import hu.nbt.SpringH2Hello.mapper.UserMapper;
-import hu.nbt.SpringH2Hello.repository.UserRepository;
-import org.springframework.stereotype.Service;
+package hu.nbt.SpringH2Hello.mapstruct.service;
 
 import java.util.List;
 
-@Service
+import org.springframework.stereotype.Service;
+
+import hu.nbt.SpringH2Hello.mapstruct.dto.UserDto;
+import hu.nbt.SpringH2Hello.mapstruct.mapper.UserMapper;
+import hu.nbt.SpringH2Hello.mapstruct.repository.UserRepository;
+
+@Service("mapstructUserService")
 public class UserService {
     private final UserRepository userRepository;
     private final UserMapper userMapper;

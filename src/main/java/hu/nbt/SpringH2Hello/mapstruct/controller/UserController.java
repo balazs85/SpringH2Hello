@@ -1,19 +1,18 @@
-package hu.nbt.SpringH2Hello.controller;
+package hu.nbt.SpringH2Hello.mapstruct.controller;
 
-import hu.nbt.SpringH2Hello.dto.UserDto;
-import hu.nbt.SpringH2Hello.entity.User;
-import hu.nbt.SpringH2Hello.repository.UserRepository;
-import hu.nbt.SpringH2Hello.service.UserService;
-import org.springframework.http.ResponseEntity;
+import java.util.List;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
+import hu.nbt.SpringH2Hello.mapstruct.dto.UserDto;
+import hu.nbt.SpringH2Hello.mapstruct.service.UserService;
 
-@RestController
-@RequestMapping("/api/users")
+
+@RestController("mapstructUserController")
+@RequestMapping("/api/mapstruct/users")
 public class UserController {
     private final UserService userService;
 
