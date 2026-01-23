@@ -9,13 +9,13 @@ import org.mapstruct.Named;
 
 import java.util.List;
 
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring", uses = UserMapper.class)
 public interface PostMapper {
     @Named("postSummary")
     PostDto toDto(Post post);
     List<PostDto> toDto(List<Post> posts);
 
-    @Mapping(target = "creator", source = "user")
+    @Mapping(target = "creator", source = "user", qualifiedByName = "userWithoutPosts")
     PostResponseDto toResponseDto(Post post);
     List<PostResponseDto> toResponseDto(List<Post> posts);
 }
