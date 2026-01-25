@@ -1,6 +1,6 @@
 package hu.nbt.SpringH2Hello.controller;
 
-import hu.nbt.SpringH2Hello.dto.PostResponseDto;
+import hu.nbt.SpringH2Hello.dto.PostDto;
 import hu.nbt.SpringH2Hello.service.PostService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,7 +19,7 @@ public class PostController {
     }
 
     @GetMapping
-    public List<PostResponseDto> getAllPosts() {
+    public List<PostDto> getAllPosts() {
         return postService.getAllPosts();
     }
 }

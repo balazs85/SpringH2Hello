@@ -1,6 +1,6 @@
 package hu.nbt.SpringH2Hello.service;
 
-import hu.nbt.SpringH2Hello.dto.PostResponseDto;
+import hu.nbt.SpringH2Hello.dto.PostDto;
 import hu.nbt.SpringH2Hello.mapper.PostMapper;
 import hu.nbt.SpringH2Hello.repository.PostRepository;
 import org.springframework.stereotype.Service;
@@ -17,7 +17,7 @@ public class PostService {
         this.postMapper = postMapper;
     }
 
-    public List<PostResponseDto> getAllPosts() {
-        return postMapper.toResponseDto(postRepository.findAll());
+    public List<PostDto> getAllPosts() {
+        return postMapper.toDto(postRepository.findAll());
     }
 }

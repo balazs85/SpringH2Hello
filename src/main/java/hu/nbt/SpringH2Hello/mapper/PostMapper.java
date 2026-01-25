@@ -1,21 +1,22 @@
 package hu.nbt.SpringH2Hello.mapper;
 
-import hu.nbt.SpringH2Hello.dto.PostDto;
-import hu.nbt.SpringH2Hello.dto.PostResponseDto;
-import hu.nbt.SpringH2Hello.entity.Post;
+import java.util.List;
+
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Named;
 
-import java.util.List;
+import hu.nbt.SpringH2Hello.dto.PostDto;
+import hu.nbt.SpringH2Hello.dto.PostSimpleDto;
+import hu.nbt.SpringH2Hello.entity.Post;
 
 @Mapper(componentModel = "spring", uses = UserMapper.class)
 public interface PostMapper {
     @Named("postSummary")
-    PostDto toDto(Post post);
-    List<PostDto> toDto(List<Post> posts);
+    PostSimpleDto toSimpleDto(Post post);
+    List<PostSimpleDto> toSimpleDto(List<Post> posts);
 
     @Mapping(target = "creator", source = "user", qualifiedByName = "userWithoutPosts")
-    PostResponseDto toResponseDto(Post post);
-    List<PostResponseDto> toResponseDto(List<Post> posts);
+    PostDto toDto(Post post);
+    List<PostDto> toDto(List<Post> posts);
 }

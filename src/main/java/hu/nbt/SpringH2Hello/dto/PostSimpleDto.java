@@ -1,10 +1,9 @@
 package hu.nbt.SpringH2Hello.dto;
 
-public record PostResponseDto(
+public record PostSimpleDto(
         Long id,
         String title,
-        String text,
-        UserDto creator
+        String text
 ) {
 }
 
