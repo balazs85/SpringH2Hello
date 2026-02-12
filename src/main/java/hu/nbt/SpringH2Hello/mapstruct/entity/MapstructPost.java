@@ -23,8 +23,8 @@ public class MapstructPost {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false)
-    private MapstructUser user;
+    @JoinColumn(name = "creator_user_id", nullable = false)
+    private MapstructUser creator;
 
     @Column(nullable = false)
     private String title;

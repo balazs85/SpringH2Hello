@@ -6,5 +6,5 @@ public record UserDto(
         Long id,
         String name,
         String email,
-        List<PostSimpleDto> posts
+        List<PostWithoutCreatorDto> posts
 )  { }

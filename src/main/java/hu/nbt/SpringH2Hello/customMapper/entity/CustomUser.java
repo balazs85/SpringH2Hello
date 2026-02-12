@@ -18,7 +18,7 @@ public class CustomUser {
     private String name;
     private String email;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "creator", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<CustomPost> posts = new ArrayList<>();
 
 }

@@ -25,7 +25,7 @@ public class PostMapper {
                 post.getId(),
                 post.getTitle(),
                 post.getText(),
-                userSimpleMapper.toSimpleDto(post.getUser())
+                userSimpleMapper.toSimpleDto(post.getCreator())
         );
     }
 

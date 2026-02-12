@@ -15,8 +15,8 @@ public class CustomPost {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false)
-    private CustomUser user;
+    @JoinColumn(name = "creator_user_id", nullable = false)
+    private CustomUser creator;
 
     @Column(nullable = false)
     private String title;
