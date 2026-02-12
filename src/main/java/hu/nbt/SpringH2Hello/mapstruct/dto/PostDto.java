@@ -4,7 +4,7 @@ public record PostDto(
         Long id,
         String title,
         String text,
-        UserSimpleDto creator
+        UserWithoutPostsDto creator
 ) {
 }
 

@@ -25,7 +25,6 @@ public class MapstructUser {
     private String name;
     private String email;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "creator", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<MapstructPost> posts = new ArrayList<>();
-
 }
