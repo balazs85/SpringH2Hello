@@ -1,7 +1,7 @@
 # Entities
 Entity classes that represent the database tables for users and posts. These classes are annotated with JPA annotations to define the table structure and relationships between entities.
 ### MapstructUser (Entity)
-```java@Entity
+```java
 @Entity
 @Table(name = "users")
 @Getter
